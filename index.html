@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML CSS</title>
-    <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <div class="navbar">
         <div class="container">
-            <a href="index.html"><span>WeyBee</span> Solution</a>
+            <a href="index.html" class="logo"><span>WeyBee</span> Solution</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="./image/menu.svg" alt="menu image">
+            <img id="mobile-cta" class="mobile-menu" src="./image/menu.svg" alt="open menu">
+
             <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="./image/exit.svg" alt="exit menu">
+
                 <ul class="primary-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Features</a></li>
@@ -27,5 +30,104 @@
             </nav>
         </div>
     </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <p class="sub-head">It's nitty &amp; gritty</p>
+                <h1>A Task App That dosen't stink</h1>
+
+                <div class="hero-cta">
+                    <a href="#" class="try-free">Try for Free</a>
+                    <a href="#" class="watch-video">
+                        <img src="./image/watch.svg" alt="Watch video">Watch a Video
+                    </a>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <img src="./image/illustration.svg" alt="illustration">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <ul class="feature-list">
+                <li>Unlimited Task</li>
+                <li>SMS Task</li>
+                <li>Confetti Explosions upon Task Completions</li>
+                <li>Social Media</li>
+                <li>Real Time collobration</li>
+                <li>Other awesom Features</li>
+            </ul>
+
+            <img src="./image/holding-phone.jpg" alt="holding phone">
+
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <ul>
+            <li>
+                <img src="./image/person.jpg" alt="person">
+
+                <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eaque i onsectetur adipisicing elit. Illum eaque i"</blockquote>
+                <cite>- Jhon Doe</cite>
+            </li>
+            <li>
+                <img src="./image/person.jpg" alt="person">
+
+                <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eaque i onsectetur adipisicing elit. Illum eaque i"</blockquote>
+                <cite>- Jhon Doe</cite>
+            </li>
+            <li>
+                <img src="./image/person.jpg" alt="person">
+
+                <blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eaque i onsectetur adipisicing elit. Illum eaque i"</blockquote>
+                <cite>- Jhon Doe</cite>
+            </li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-left">
+                <h2>Contact</h2>
+
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+
+                    <label for="msg">Message</label>
+                    <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+
+                    <input type="submit" value="Send Message" class="submit-msg" name="Submit">
+                </form>
+            </div>
+
+            <div class="contact-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.573704442255!2d70.76767291539416!3d22.294132548751506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca2bfb320565%3A0x8ec7d89783d9da24!2sRaiya%20Telecom%20Exchange%20Circle!5e0!3m2!1sen!2sin!4v1655451072904!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+        nav = document.querySelector('nav');
+        mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', ()=> {
+            nav.classList.add('menu-btn');
+        })
+        
+        mobileBtnExit.addEventListener('click', ()=> {
+            nav.classList.remove('menu-btn');
+        })
+    </script>
+
 </body>
 </html>
